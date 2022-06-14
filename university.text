@@ -1,0 +1,93 @@
+1:
+
+SELECT *
+FROM students
+WHERE date_of_birth BETWEEN '1990-01-01' AND '1990-12-31';
+
+------
+
+2:
+
+SELECT * 
+FROM db_university.courses
+WHERE cfu > 10;
+
+--------
+
+
+3:
+
+SELECT * 
+FROM db_university.students
+WHERE date_of_birth < '1992-01-01'
+;
+
+
+---------
+
+
+4:
+
+SELECT * 
+FROM db_university.courses
+WHERE period = 'I semestre' AND year = 1;
+
+
+-----------
+
+
+5:
+
+
+SELECT * 
+FROM db_university.exams
+WHERE hour > '14:00:00' AND date = '2020-06-20';
+
+
+------
+
+
+6:
+
+
+SELECT * 
+FROM db_university.degrees
+WHERE level = 'magistrale';
+
+
+---------
+
+7:
+
+SELECT 	count(id)
+FROM db_university.departments;
+
+
+-----
+
+
+8:
+
+
+
+SELECT count(phone)
+FROM db_university.teachers;
+
+
+
+secondo metodo(valido??)
+
+
+SELECT count(id)
+FROM db_university.teachers
+WHERE phone IS NULL;
+
+
+------
+
+
+
+
+
+
+
