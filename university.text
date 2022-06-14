@@ -1,7 +1,7 @@
 1:
 
 SELECT *
-FROM students
+FROM `students`
 WHERE date_of_birth BETWEEN '1990-01-01' AND '1990-12-31';
 
 ------
@@ -20,6 +20,15 @@ WHERE cfu > 10;
 SELECT * 
 FROM db_university.students
 WHERE date_of_birth < '1992-01-01'
+;
+
+
+opzione corretta??
+
+
+SELECT * 
+FROM db_university.students
+WHERE date_of_birth < '1992-06-14'
 ;
 
 
@@ -80,7 +89,7 @@ secondo metodo(valido??)
 
 SELECT count(id)
 FROM db_university.teachers
-WHERE phone IS NULL;
+WHERE `phone` IS NULL;
 
 
 ------
