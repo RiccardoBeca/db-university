@@ -1,0 +1,42 @@
+1:
+
+SELECT COUNT(*), YEAR(`students`.`enrolment_date`) AS `anno`
+FROM `students`
+GROUP BY anno;
+
+
+----------------------
+
+
+2:
+
+SELECT COUNT(*), `teachers`.`office_address`
+FROM `teachers`
+GROUP BY `office_address`;
+
+
+----------------------
+
+
+3:
+
+SELECT ROUND(AVG(`exam_student`.`vote`)) AS `media`, `courses`.`name` AS `esame`, `degrees`.`name` AS `corso_di_laurea` 
+FROM  `degrees`
+JOIN `courses` ON `courses`.`degree_id` = `degrees`.`id`
+JOIN `exams` ON `exams`.`course_id` = `courses`.`id`
+JOIN `exam_student` ON `exam_student`.`exam_id` = `exams`.`id`
+WHERE `exam_student`.`vote` >= 18
+GROUP BY `courses`.`id`
+ORDER BY `media` DESC;
+
+
+
+----------------------
+
+
+4:
+
+
+
+
+----------------------
