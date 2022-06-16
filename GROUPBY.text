@@ -36,6 +36,10 @@ ORDER BY `media` DESC;
 
 4:
 
+SELECT COUNT(*), `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
+
 
 
 
